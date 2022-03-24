@@ -17,15 +17,11 @@ class TabBarController: UITabBarController {
     }
 
     private func loadViewControllers() {
-        guard let viewControllers = viewControllers else { return }
+        guard let contactListVC = viewControllers?.first as? ContactListViewController else { return }
+        guard let detailedListVC = viewControllers?.last as? DetailedListViewController else { return }
         
-        for viewController in viewControllers {
-            if let contactListVC = viewController as? ContactListViewController {
-                contactListVC.personList = personList
-            } else if let detailedListVC = viewController as? DetailedListViewController {
-                detailedListVC.personList = personList
-            }
-        }
+        contactListVC.personList = personList
+        detailedListVC.personList = personList
     }
     
 }
