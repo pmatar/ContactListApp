@@ -6,7 +6,7 @@
 //
 
 class DataManager {
-    let names: [String] = [
+    let names = [
         "John",
         "Sharon",
         "Aaron",
@@ -28,7 +28,7 @@ class DataManager {
         "Maya",
         "Nolan"
     ]
-    let surnames: [String] = [
+    let surnames = [
         "Murphy",
         "Jankin",
         "Williams",
@@ -50,7 +50,7 @@ class DataManager {
         "Hardy",
         "Wilson"
     ]
-    let phoneNumbers: [String] = [
+    let phoneNumbers = [
         "9615599",
         "9612951",
         "9610957",
@@ -72,7 +72,7 @@ class DataManager {
         "1-153-652-7674",
         "1-674-646-5812"
     ]
-    let emails: [String] = [
+    let emails = [
         "sender@hotmail.com",
         "apple@hotmail.com",
         "red@hotmail.com",

@@ -6,12 +6,12 @@
 //
 
 struct Person {
-    var name: String
-    var surname: String
-    var phoneNumber: String
-    var email: String
+    let name: String
+    let surname: String
+    let phoneNumber: String
+    let email: String
     
-    var fullname: String {
+    var fullName: String {
         "\(name) \(surname)"
     }
     
@@ -27,7 +27,12 @@ struct Person {
         let count = min(names.count, surnames.count, phoneNumbers.count, emails.count)
         
         while result.count < count {
-            result.append(Person(name: names.removeFirst(), surname: surnames.removeFirst(), phoneNumber: phoneNumbers.removeFirst(), email: emails.removeFirst()))
+            result.append(
+                Person(name: names.removeFirst(),
+                       surname: surnames.removeFirst(),
+                       phoneNumber: phoneNumbers.removeFirst(),
+                       email: emails.removeFirst())
+            )
         }
         
         return result

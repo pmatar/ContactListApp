@@ -20,10 +20,9 @@ class TabBarController: UITabBarController {
         guard let viewControllers = viewControllers else { return }
         
         for viewController in viewControllers {
-            guard let navigationVC = viewController as? UINavigationController else { return }
-            if let contactListVC = navigationVC.topViewController as? ContactListViewController {
+            if let contactListVC = viewController as? ContactListViewController {
                 contactListVC.personList = personList
-            } else if let detailedListVC = navigationVC.topViewController as? DetailedListViewController {
+            } else if let detailedListVC = viewController as? DetailedListViewController {
                 detailedListVC.personList = personList
             }
         }

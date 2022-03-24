@@ -21,7 +21,7 @@ class ContactListViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "contact", for: indexPath)
         let person = personList[indexPath.row]
         var content = cell.defaultContentConfiguration()
-        content.text = person.fullname
+        content.text = person.fullName
         cell.contentConfiguration = content
         
         return cell
